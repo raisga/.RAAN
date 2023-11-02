@@ -1,7 +1,5 @@
 # OmniCreator
 
-# README.md
-
 ## Project Title: OmniContent Creator
 
 OmniContent Creator is a versatile application designed to utilize the OpenAI ChatGPT API to generate various types of media content. The app aims to streamline the creation of book covers, song lyrics, educational videos, grammar corrections, language translations, and more, leveraging the power of AI.
