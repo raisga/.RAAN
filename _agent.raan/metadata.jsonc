@@ -1,7 +1,7 @@
 {
     // TODO: Add metadata for the agent sample
-    "name": "agent_sample",
-    "description": "A sample agent demonstrating basic functionality",
+    "name": "kitchen_agent",
+    "description": "Reasoning layer for a kitchen assistant agent that helps with cooking tasks.",
     "version": "1.0.0",
     "author": "Your Name",
     "license": "MIT",
