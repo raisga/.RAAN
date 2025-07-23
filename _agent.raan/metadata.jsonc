@@ -1,12 +1,11 @@
 {
-    // TODO: Add metadata for the agent sample
-    "name": "kitchen_agent",
-    "description": "Reasoning layer for a kitchen assistant agent that helps with cooking tasks.",
-    "version": "1.0.0",
-    "author": "Your Name",
-    "license": "MIT",
-    "created_at": "2023-10-01T00:00:00Z",
-    "updated_at": "2023-10-01T00:00:00Z",
-    "tags": ["sample", "agent", "demo"]
-    // ...
+    "name": "",
+    "description": "",
+    "version": "0.0.0",
+    "author": "",
+    "license": "",
+    "created_at": "2025-07-21T00:00:00Z",
+    "updated_at": "2025-07-21T00:00:00Z",
+    "tags": [""]
+    // TODO: Add more metadata fields as needed
 }

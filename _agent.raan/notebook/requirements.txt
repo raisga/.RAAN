@@ -1,4 +1,7 @@
 jupyterlab
-ollama
 rich
 pandas
+ollama
+langchain
+transformers
+faiss-cpu

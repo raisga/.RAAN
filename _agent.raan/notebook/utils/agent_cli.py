@@ -1,17 +1,16 @@
 from utils.preprocess_text import preprocess_text
 from utils.ollama_chat import ollama_chat
 
+# TODO: Improve the agent CLI with better command handling, memory management, and error handling.
 def agent_cli(console, df):
-    console.print("[bold green]Welcome to the Agent Interface![/bold green]")
-    console.print("Type your question, or 'exit' to quit.\n")
-    
-    memory = []  # Simple memory for recall
-    
-    # Available commands
     commands = {
         "help": "Show available commands"
-        # Add more commands as needed
+        # ...Add more commands as needed
     }
+    memory = []  # Simple memory for recall
+    
+    console.print("[bold green]Welcome to the Agent Interface![/bold green]")
+    console.print("Type your question, or 'exit' to quit.\n")
     
     while True:
         user_input = console.input("[bold blue]AI Agent:[/bold blue] ").strip().lower()
