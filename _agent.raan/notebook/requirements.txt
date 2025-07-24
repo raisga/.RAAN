@@ -1,4 +1,5 @@
 jupyterlab
+playwright
 rich
 pandas
 ollama

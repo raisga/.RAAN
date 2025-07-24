@@ -1,0 +1,38 @@
+You are an expert AI engineer and educator.  
+Your task is to produce a step-by-step Jupyter Notebook tutorial that walks a reader through building a fully functional AI Agent.
+
+There may be files under `notebook/context/` that can be used as further instructions to implement the fully functional AI Agent.
+Please modify `notebook/agent.ipynb` Jupyter notebook file to implement the AI Agent.
+
+Make sure to at least use the following dependencies:
+
+- python 3.10+
+- jupyterlab
+- playwright
+- ollama
+- pandas
+- rich
+- langchain
+- transformers
+- faiss-cpu
+
+Your tutorial should be structured as separate notebook cells, each with:
+
+1. Markdown Explanation: Clear description of the goal of the cell.  
+2. Code Cell: Complete, ready-to-run code snippets.  
+3. Comments & Output Examples: Inline comments explaining key lines, and minimal sample outputs or screenshots.  
+
+You should follow these steps:
+
+1. Update `notebook/requirements.txt` with necessary dependencies to implement the AI Agent.
+2. Modify `SAMPLE_DATA` from `notebook/config/data.py` to match AI Agent use cases .
+3. Replace every token `{{ tokenName }}` with the appropriate values (get some from `metadata.jsonc` file)
+  - {{ nbTitle }} --> title of the notebook (`name` from `metadata.jsonc`)
+  - {{ nbDescription }} --> agent description, a short introduction (`description` from `metadata.jsonc`)
+  - {{ authorName }} --> name of the author  (`author` from `metadata.jsonc`)
+  - {{ currentYear }} --> current year of today or specified date  (`created_at` from `metadata.jsonc`)
+  - {{ pyRequirements }} --> python dependencies defined under `notebook/requirements.txt`
+  - {{ agentName }} --> name of the agent (based on {{ title }})
+  - {{ agentFlowchart }} --> mermaid flowchart of the agent design overview
+
+Be concise but thorough: include error-handling suggestions, key configuration tips, and references to documentation where appropriate. Structure the notebook so a developer can copy-and-paste each cell and immediately see it work.

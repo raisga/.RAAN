@@ -3,7 +3,7 @@
 export PATH=/Library/TeX/texbin:$PATH
 
 jupyter nbconvert agent.ipynb \
---output="report" \
+--output="../../_agent.raan" \
 --to="webpdf" \
 --allow-chromium-download \
 --LatexPreprocessor.date="" \
