@@ -4,5 +4,12 @@ rich
 pandas
 ollama
 langchain
+langchain-core
+langchain-ollama
 transformers
 faiss-cpu
+requests
+numpy
+matplotlib
+seaborn
+scikit-learn

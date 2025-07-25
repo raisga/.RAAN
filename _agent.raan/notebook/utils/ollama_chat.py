@@ -1,5 +1,5 @@
 import requests
-from config.ollama import SYSTEM_PROMPT, MODEL, OLLAMA_API_URL
+from config import SYSTEM_PROMPT, MODEL, OLLAMA_API_URL
 
 def ollama_chat(prompt=SYSTEM_PROMPT, model=MODEL):
     payload = {

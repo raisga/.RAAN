@@ -1,38 +1,61 @@
-You are an expert AI engineer and educator.  
-Your task is to produce a step-by-step Jupyter Notebook tutorial that walks a reader through building a fully functional AI Agent.
+You are an expert AI engineer and educator. Your objective is to produce a comprehensive, step-by-step Jupyter Notebook tutorial demonstrating how to build a fully functional AI Agent.
 
-There may be files under `notebook/context/` that can be used as further instructions to implement the fully functional AI Agent.
-Please modify `notebook/agent.ipynb` Jupyter notebook file to implement the AI Agent.
+### Instructions:
 
-Make sure to at least use the following dependencies:
+* **Base Notebook**: Modify the existing notebook file located at `notebook/agent.ipynb` to implement the AI Agent.
 
-- python 3.10+
-- jupyterlab
-- playwright
-- ollama
-- pandas
-- rich
-- langchain
-- transformers
-- faiss-cpu
+* **Supporting Files**: Check the directory `notebook/context/` for additional instructions or context relevant to the AI Agent's implementation.
 
-Your tutorial should be structured as separate notebook cells, each with:
+### Notebook Structure:
 
-1. Markdown Explanation: Clear description of the goal of the cell.  
-2. Code Cell: Complete, ready-to-run code snippets.  
-3. Comments & Output Examples: Inline comments explaining key lines, and minimal sample outputs or screenshots.  
+For **every** instructional step, create two consecutive cells:
 
-You should follow these steps:
+1. **Markdown cell**  
 
-1. Update `notebook/requirements.txt` with necessary dependencies to implement the AI Agent.
-2. Modify `SAMPLE_DATA` from `notebook/config/data.py` to match AI Agent use cases .
-3. Replace every token `{{ tokenName }}` with the appropriate values (get some from `metadata.jsonc` file)
-  - {{ nbTitle }} --> title of the notebook (`name` from `metadata.jsonc`)
-  - {{ nbDescription }} --> agent description, a short introduction (`description` from `metadata.jsonc`)
-  - {{ authorName }} --> name of the author  (`author` from `metadata.jsonc`)
-  - {{ currentYear }} --> current year of today or specified date  (`created_at` from `metadata.jsonc`)
-  - {{ pyRequirements }} --> python dependencies defined under `notebook/requirements.txt`
-  - {{ agentName }} --> name of the agent (based on {{ title }})
-  - {{ agentFlowchart }} --> mermaid flowchart of the agent design overview
+   * State the purpose of the step clearly and concisely.  
 
-Be concise but thorough: include error-handling suggestions, key configuration tips, and references to documentation where appropriate. Structure the notebook so a developer can copy-and-paste each cell and immediately see it work.
+2. **Code cell**  
+
+   * Provide complete, ready‑to‑run code.  
+   * Include inline comments for key lines.  
+   * Show minimal example output (print statements or screenshot references).  
+
+*Do **not** append additional sections once the walkthrough ends.*
+*The last section should be the interactive AI Agent cell"
+
+### Steps to Follow:
+
+1. **Update Dependencies**:
+
+   * Modify `notebook/requirements.txt` with all necessary dependencies required by the AI Agent.
+
+2. **Configure Sample Data**:
+
+   * Adjust `SYSTEM_PROMPT` and `SAMPLE_DATA` in `notebook/config.py` to match relevant AI Agent use cases.
+
+3. **Replace Tokens**:
+   Replace all placeholder tokens (`{{ tokenName }}`) with corresponding values obtained from `metadata.jsonc` or other defined sources:
+
+   * `{{ nbTitle }}` → Title of the notebook (`name` field in `metadata.jsonc`, create from *context* if empty).
+   * `{{ nbDescription }}` → Description of the agent (`description` field in `metadata.jsonc`, create from *context* if empty).
+   * `{{ authorName }}` → Author’s name (`author` field in `metadata.jsonc`).
+   * `{{ currentYear }}` → Current year based on today's date or a specified date (`created_at` from `metadata.jsonc`).
+   * `{{ pyRequirements }}` → Python dependencies listed in `notebook/requirements.txt`.
+   * `{{ agentName }}` → Name of the agent, derived from `{{ nbTitle }}`.
+   * `{{ agentFlowchart }}` → Mermaid flowchart representing an overview of the agent's design.
+
+## Quality Expectations  
+
+* **Concise yet thorough** explanations (aim for clarity, avoid fluff).
+* Code must run without modification in a clean environment that has the listed dependencies installed.
+* Use best practices for readability and maintainability.
+
+### Deliverables  
+
+* Updated **`notebook/agent.ipynb`** following the structure above.
+* Updated **`notebook/requirements.txt`** and **`notebook/config.py`**, fully synced with token replacements.
+* If needed, **`notebook/utils/*.py`** with new helper functions
+* If needed, **`notebook/tools/*.py`** with new agent tools
+
+*NO other files or sections should be created beyond what this brief specifies.*
+*DO NOT create or update a README.md, or any other document files*

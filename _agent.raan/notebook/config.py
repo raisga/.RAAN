@@ -1,3 +1,14 @@
+# !/usr/bin/env python3.10
+# -*- coding: utf-8 -*-
+
+OLLAMA_API_URL = "http://localhost:11434/api/generate"
+
+MODEL = "llama3"
+ 
+SYSTEM_PROMPT = """
+You are an AI assistant designed to help users with various tasks.
+"""
+
 SAMPLE_DATA = {
     "id": [0,1,2], # Unique identifier for each entry
     "tag": [ # Tags for easy searching
