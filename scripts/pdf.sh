@@ -2,7 +2,7 @@
 
 export PATH=/Library/TeX/texbin:$PATH
 
-output_path="../../_agent.RAAN"
+output_path="_agent.RAAN"
 
 jupyter nbconvert agent.ipynb \
 --output="$output_path" \

@@ -4,7 +4,7 @@
 from utils.preprocess_text import preprocess_text
 from utils.ollama_chat import ollama_chat
 
-def agent_cli(console, df):
+def agent_cli(console, kb):
     commands = {
         "help": "Show available commands"
         # ...Add more commands as needed
@@ -32,7 +32,7 @@ def agent_cli(console, df):
         else:
             # Check knowledge base first
             user_clean = preprocess_text(user_input)
-            match = df[df["question_clean"] == user_clean]
+            match = kb[kb["question_clean"] == user_clean]
             
             if not match.empty:
                 answer = match.iloc[0]["answer"]

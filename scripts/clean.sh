@@ -7,7 +7,8 @@
 echo "🧹 Cleaning up cache files and temporary files..."
 
 # Get the project root directory (parent of _agent.RAAN)
-NOTEBOOK_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+# NOTEBOOK_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+NOTEBOOK_DIR=./_agent.RAAN/notebook
 
 echo "📁 Notebook directory: $NOTEBOOK_DIR"
 
@@ -43,6 +44,10 @@ echo "🧪 Removing testing cache files..."
 find "$NOTEBOOK_DIR" -type d -name ".pytest_cache" -exec rm -rf {} + 2>/dev/null || true
 find "$NOTEBOOK_DIR" -type d -name ".mypy_cache" -exec rm -rf {} + 2>/dev/null || true
 find "$NOTEBOOK_DIR" -name ".coverage" -delete 2>/dev/null || true
+
+# Remove venv or virtual environment directories
+echo "🦠 Removing virtual environment directories..."
+find "$NOTEBOOK_DIR" -type d -name "venv" -o 
 
 # Clean up Jupyter notebook checkpoints
 echo "📓 Removing Jupyter notebook checkpoints..."
