@@ -1,3 +1,6 @@
+# !/usr/bin/env python3.10
+# -*- coding: utf-8 -*-
+
 from rich.table import Table
 
 def format_knowledge_base(df):

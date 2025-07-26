@@ -23,6 +23,13 @@ To use the RAAN notebook system, follow these steps:
 - [ ] Update `ollama` to `localai` in jupyter notebooks.
 - [ ] Research the best practices for structuring file extensions for AI notebooks.
 - [ ] Complete the specifications for the file extension, check what is the "industry standard" for AI notebooks.
-- [ ] Implement a plugin for popular text editors to enhance the editing experience.
+- [ ] Implement a plugin for VS Code to improve the editing experience.
 - [ ] Create artifacts for the RAAN project, including example notebooks and documentation.
 - [ ] Integrate with Nutrino Notebooks for MCP capabilities (PoC this first!).
+- [ ] Setup python lintering and formatting.
+- [ ] Setup python testing framework.
+
+## Resources
+
+- [Jupyter Notebook Templates](http://blog.juliusschulz.de/blog/ultimate-ipython-notebook#templates)
+- [Mermaid Documentation](https://mermaid-js.github.io/mermaid/#/)

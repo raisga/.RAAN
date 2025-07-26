@@ -1,0 +1,38 @@
+Kitchen Intelligence
+
+Technical details	
+Submit file	diagram file or link to external tool, README, support written txt file
+Objective
+Agent reasoning/logic layer.
+
+Project Description
+In this project, you'll examine and refine the reasoning layer of your restaurant kitchen manager agent. The reasoning layer is responsible for making informed decisions based on available data, past experiences, and real-time constraints. A well-structured reasoning layer ensures the agent can process inputs intelligently, handle uncertainty, and adapt to complex scenarios in a dynamic kitchen environment.
+
+Your tasks include:
+
+Analyzing how your agent currently makes decisions and identifying areas for improvement.
+Implementing structured reasoning methods such as rule-based logic, probabilistic models, or symbolic reasoning.
+Enhancing the agent’s ability to process, analyze, and prioritize tasks using reasoning frameworks.
+Evaluating different approaches, such as knowledge graphs, reinforcement learning, or decision trees, to strengthen the agent’s logical framework.
+By completing this project, you will improve the agent’s ability to reason through tasks, manage uncertainties, and enhance efficiency in AI-driven decision-making.
+
+Tools/Languages/Frameworks
+Tools you can consider using: LlamaIndex, Haystack, LangChain, Quantalogic, Microsoft AutoGen.
+
+Deliverable
+Submit the following:
+
+A written analysis of your agent’s current reasoning layer and identified improvements.
+Documentation explaining the chosen reasoning framework and how it was implemented.
+A working agent with an improved reasoning layer that demonstrates enhanced decision-making capabilities.
+A system design diagram illustrating how reasoning processes are structured within the agent.
+If necessary, include a file with a link to any diagrams (e.g., in Draw.io, Lucidchart) or submit as a PDF.
+
+Assessment Criteria
+Submissions will be evaluated based on the following criteria:
+
+Reasoning Layer Analysis: Does the submission provide a clear evaluation of the agent’s reasoning layer and its weaknesses?
+Framework Implementation: Have appropriate reasoning frameworks been applied and justified?
+Decision-Making Improvement: Does the updated reasoning layer enhance the agent’s ability to process and prioritize tasks?
+System Design Clarity: Is the reasoning architecture well-structured and effectively documented?
+Functionality: Does the agent demonstrate improved logical reasoning and decision-making capabilities?

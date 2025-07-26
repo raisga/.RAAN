@@ -8,6 +8,8 @@ You are an expert AI engineer and educator. Your objective is to produce a compr
 
 ### Notebook Structure:
 
+* **ONLY** create or edit files inside `notebook/`*
+
 For **every** instructional step, create two consecutive cells:
 
 1. **Markdown cell**  
@@ -31,18 +33,18 @@ For **every** instructional step, create two consecutive cells:
 
 2. **Configure Sample Data**:
 
-   * Adjust `SYSTEM_PROMPT` and `SAMPLE_DATA` in `notebook/config.py` to match relevant AI Agent use cases.
+   * Adjust `SYSTEM_PROMPT`, `SAMPLE_DATA` and `MERMAID_DIAGRAM` in `notebook/config.py` to match relevant AI Agent use cases.
 
-3. **Replace Tokens**:
-   Replace all placeholder tokens (`{{ tokenName }}`) with corresponding values obtained from `metadata.jsonc` or other defined sources:
+3. **Replace Values**:
+   Replace all content from the html tags that have `data-tag` attribute, with corresponding values obtained from `metadata.jsonc` or other defined sources:
 
-   * `{{ nbTitle }}` → Title of the notebook (`name` field in `metadata.jsonc`, create from *context* if empty).
-   * `{{ nbDescription }}` → Description of the agent (`description` field in `metadata.jsonc`, create from *context* if empty).
-   * `{{ authorName }}` → Author’s name (`author` field in `metadata.jsonc`).
-   * `{{ currentYear }}` → Current year based on today's date or a specified date (`created_at` from `metadata.jsonc`).
-   * `{{ pyRequirements }}` → Python dependencies listed in `notebook/requirements.txt`.
-   * `{{ agentName }}` → Name of the agent, derived from `{{ nbTitle }}`.
-   * `{{ agentFlowchart }}` → Mermaid flowchart representing an overview of the agent's design.
+   * `nbTitle` → Title of the notebook (`name` field in `metadata.jsonc`, create from *context* if empty).
+   * `nbDescription` → Description of the agent (`description` field in `metadata.jsonc`, create from *context* if empty).
+   * `authorName` → Author’s name (`author` field in `metadata.jsonc`).
+   * `currentYear` → Current year based on today's date or a specified date (`created_at` from `metadata.jsonc`).
+   * `pyRequirements` → Python dependencies listed in `notebook/requirements.txt`.
+   * `agentName` → Name of the agent, derived from `nbTitle`.
+   * `agentFlowchart` → Mermaid flowchart representing an overview of the agent's design.
 
 ## Quality Expectations  
 
@@ -53,9 +55,8 @@ For **every** instructional step, create two consecutive cells:
 ### Deliverables  
 
 * Updated **`notebook/agent.ipynb`** following the structure above.
-* Updated **`notebook/requirements.txt`** and **`notebook/config.py`**, fully synced with token replacements.
-* If needed, **`notebook/utils/*.py`** with new helper functions
-* If needed, **`notebook/tools/*.py`** with new agent tools
+* Updated **`notebook/requirements.txt`** and **`notebook/config.py`**, fully synced with `data-tag` content replacements.
+* If needed, create new tools for the agent under **`notebook/tools.py`**.
+* If needed, create new helper functions under **`notebook/utils/`**.
 
 *NO other files or sections should be created beyond what this brief specifies.*
-*DO NOT create or update a README.md, or any other document files*

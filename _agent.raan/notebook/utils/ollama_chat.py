@@ -1,3 +1,6 @@
+# !/usr/bin/env python3.10
+# -*- coding: utf-8 -*-
+
 import requests
 from config import SYSTEM_PROMPT, MODEL, OLLAMA_API_URL
 
