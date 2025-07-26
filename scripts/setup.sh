@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
+NOTEBOOK_DIR=./_agent.RAAN/notebook
+
 ( \
     cd _agent.RAAN/notebook && \
     python3.10 -m venv venv \
@@ -8,7 +10,7 @@
     && pip install -r requirements.txt \
     && echo "\n\n\n=========================" \
     && echo "Virtual environment setup complete." \
-    && echo "To activate the virtual environment, run: source venv/bin/activate" \
+    && echo "To activate the virtual environment, run: source $NOTEBOOK_DIR/venv/bin/activate" \
     && echo "To deactivate the virtual environment, run: deactivate" \
     && echo "To run the notebook, use: ./scripts/run.sh" \
     && echo "To generate a PDF, use: ./scripts/pdf.sh" \

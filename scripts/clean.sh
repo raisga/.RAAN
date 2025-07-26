@@ -1,15 +1,12 @@
 #!/bin/bash
 
+NOTEBOOK_DIR=./_agent.RAAN/notebook
+
 # Clean-up cache files and temporary files
 # This script is intended to clean up cache files and temporary files
 # that may have been created during the execution of the notebook.
 
 echo "🧹 Cleaning up cache files and temporary files..."
-
-# Get the project root directory (parent of _agent.RAAN)
-# NOTEBOOK_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-NOTEBOOK_DIR=./_agent.RAAN/notebook
-
 echo "📁 Notebook directory: $NOTEBOOK_DIR"
 
 # Remove Python cache files
@@ -47,7 +44,8 @@ find "$NOTEBOOK_DIR" -name ".coverage" -delete 2>/dev/null || true
 
 # Remove venv or virtual environment directories
 echo "🦠 Removing virtual environment directories..."
-find "$NOTEBOOK_DIR" -type d -name "venv" -o 
+find "$NOTEBOOK_DIR" -type d -name "venv" -exec rm -rf {} + 2>/dev/null || true
+find "$NOTEBOOK_DIR" -type d -name ".venv" -exec rm -rf {} + 2>/dev/null || true
 
 # Clean up Jupyter notebook checkpoints
 echo "📓 Removing Jupyter notebook checkpoints..."

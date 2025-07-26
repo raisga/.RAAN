@@ -12,12 +12,12 @@ Take a look at the [SPECS.md](SPECS.md) file for detailed specifications of the 
 
 To use the RAAN notebook system, follow these steps:
 
-1. Create a new file with the `.RAAN` extension.
+1. Create a new file with the `.RAAN` extension (follow the [specifications](SPECS.MD)).
 2. Structure the file according to the specifications outlined above.
 3. Use a compatible text editor or IDE to edit the file.
 4. Save the file to maintain the structure and metadata.
 
-## TODO
+## TODO - Tech Debt
 
 - [ ] Update `/scripts` to use python scripts instead of bash scripts.
 - [ ] Update `ollama` to `localai` in jupyter notebooks.
@@ -28,6 +28,8 @@ To use the RAAN notebook system, follow these steps:
 - [ ] Integrate with Nutrino Notebooks for MCP capabilities (PoC this first!).
 - [ ] Setup python lintering and formatting.
 - [ ] Setup python testing framework.
+- [ ] Create a custom template webpdf to export notebook as PDF with custom styles (e.g. fix the margins!).
+- [ ] Handle context to use vector databases for knowledge bases, instead of just using the knowledge base as a list of strings.
 
 ## Resources
 
