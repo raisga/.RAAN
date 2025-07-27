@@ -30,6 +30,7 @@ For **every** instructional step, create two consecutive cells:
 1. **Update Dependencies**:
 
    * Modify `notebook/requirements.txt` with all necessary dependencies required by the AI Agent.
+   *Do **not** install built-in Python modules 
 
 2. **Configure Sample Data**:
 
